@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\david\OneDrive\Dokument\Webbutvecklare\WIN21\GITHUB\DATA\Management_System_Sql_EFC_Database\Management_System_Sql_EFC_Database\App.xaml
-2-509550488
+7-1181537907
 
-20-682386069
+241700892703
 214-497381747
-MainWindow.xaml;Templates\MenuItemTemplate.xaml;
+MainWindow.xaml;Templates\MenuItemTemplate.xaml;Views\CaseRegisterView.xaml;Views\CaseView.xaml;Views\MainPageView.xaml;Views\UserRegisterView.xaml;Views\UserView.xaml;
 
 False
 

@@ -7,40 +7,53 @@ using System.Threading.Tasks;
 
 namespace Management_System_Sql_EFC_Database.Models.ViewModels
 {
-    internal class MainViewModel : ObservableObject
-    {
-        private object _currentView;
-
-        public MainViewModel()
+        internal class MainViewModel : ObservableObject
         {
-            CaseRegisterViewModel = new CaseRegisterViewModel();
+            private object _currentView;
 
-        }
-
-        public object CurrentView
-        {
-            get { return _currentView; }
-            set
+            public MainViewModel()
             {
-                _currentView = value;
-                OnPropertyChanged();
+                CaseRegisterViewModel = new CaseRegisterViewModel();
+                CaseViewModel = new CaseViewModel();
+                UserRegisterViewModel = new UserRegisterViewModel();
+                UserViewModel = new UserViewModel();
+                MainPageViewModel = new MainPageViewModel();
+
+                CurrentView = MainPageViewModel;
+
+                CaseRegisterViewCommand = new RelayCommand(x => CurrentView = CaseRegisterViewModel);
+                CaseViewCommand = new RelayCommand(x => CurrentView = CaseViewModel);
+                UserRegisterViewCommand = new RelayCommand(x => CurrentView = UserRegisterViewModel);
+                UserViewCommand = new RelayCommand(x => CurrentView = UserViewModel);
+                MainPageCommand = new RelayCommand(x => CurrentView = MainPageViewModel);
             }
+
+            public object CurrentView
+            {
+                get { return _currentView; }
+                set
+                {
+                    _currentView = value;
+                    OnPropertyChanged();
+                }
+            }
+
+            public RelayCommand CaseRegisterViewCommand { get; set; }
+            public CaseRegisterViewModel CaseRegisterViewModel { get; set; }
+
+
+            public RelayCommand CaseViewCommand { get; set; }
+            public CaseViewModel CaseViewModel { get; set; }
+
+
+            public RelayCommand UserRegisterViewCommand { get; set; }
+            public UserRegisterViewModel UserRegisterViewModel { get; set; }
+
+
+            public RelayCommand UserViewCommand { get; set; }
+            public UserViewModel UserViewModel { get; set; }
+
+            public RelayCommand MainPageCommand { get; set; }
+            public MainPageViewModel MainPageViewModel { get; set; }
         }
-
-        public RelayCommand CaseRegisterViewModelCommand { get; set; }
-        public CaseRegisterViewModel CaseRegisterViewModel { get; set; }
-
-        public RelayCommand CaseViewModelCommand { get; set; }
-        public CaseViewModel CaseViewModel { get; set; }
-
-        public RelayCommand UserRegisterViewModelCommand { get; set; }
-        public UserRegisterViewModel UserRegisterViewModel { get; set; }
-
-        public RelayCommand UserViewModelCommand { get; set; }
-        public UserViewModel UserViewModel { get; set; }
-
-        public RelayCommand MainPageViewModelCommand { get; set; }
-        public MainPageViewModel MainPageViewModel { get; set; }
-
-    }
 }

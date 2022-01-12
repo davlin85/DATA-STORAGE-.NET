@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Management_System_Sql_EFC_Database.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,6 @@ namespace Management_System_Sql_EFC_Database.Models.ViewModels
 {
     internal class MainPageViewModel
     {
+
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Management_System_Sql_EFC_Database.Helpers
 {
-    internal class ObservableObject : INotifyPropertyChange
+    internal class ObservableObject : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler? PropertyChanged;
 

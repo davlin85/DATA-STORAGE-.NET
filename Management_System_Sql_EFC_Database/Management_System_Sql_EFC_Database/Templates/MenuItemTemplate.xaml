@@ -16,7 +16,7 @@
         </Style.Setters>
         <Style.Triggers>
             <Trigger Property="IsChecked" Value="true">
-                <Setter Property="Background" Value="#1B6686" />
+                <Setter Property="Background" Value="#1B6686"/>
             </Trigger>
         </Style.Triggers>
     </Style>

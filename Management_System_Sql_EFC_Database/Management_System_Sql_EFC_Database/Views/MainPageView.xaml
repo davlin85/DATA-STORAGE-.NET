@@ -6,7 +6,8 @@
              xmlns:local="clr-namespace:Management_System_Sql_EFC_Database.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="White">
-        <TextBlock Grid.Row="0" Text="Welcome to Management System" FontSize="20" FontWeight="Bold" Padding="10 10 10 10"/>
+    <Grid Background="#E7E7E7">
+        <TextBlock Grid.Row="0" Text="Welcome to Management System" FontSize="20" FontWeight="Bold" Padding="30 20 10 10"/>
     </Grid>
+   
 </UserControl>

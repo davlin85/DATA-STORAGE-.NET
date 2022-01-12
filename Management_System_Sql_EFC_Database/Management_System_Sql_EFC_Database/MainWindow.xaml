@@ -6,29 +6,48 @@
         xmlns:local="clr-namespace:Management_System_Sql_EFC_Database"
         xmlns:viewModel="clr-namespace:Management_System_Sql_EFC_Database.Models.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="1100">
-    
+        Title="MainWindow" Height="710" Width="1100">
+
     <Window.DataContext>
         <viewModel:MainViewModel />
     </Window.DataContext>
-    
+
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="150" />
+            <ColumnDefinition Width="140" />
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
         <StackPanel Grid.Column="0" Background="#1b80ab">
-            <RadioButton Content="Main page" Foreground="white" FontSize="14" IsChecked="True" Style="{StaticResource MenuItemTemplate}" Command="{Binding MainPageCommand}" Margin="10 10 10 30" />
+            <Image HorizontalAlignment="Center" Height="117" Width="116" Margin="0 10 0 5">
+                <Image.Source>
+                    <BitmapImage UriSource="Images/system.png"/>
+                </Image.Source>
+            </Image>
 
-            <RadioButton Content="Register User" Foreground="white" FontSize="14" Style="{StaticResource MenuItemTemplate}" Command="{Binding UserRegisterViewCommand}" Margin="10 0 10 10" />
-            <RadioButton Content="Register Case" Foreground="white" FontSize="14" Style="{StaticResource MenuItemTemplate}" Command="{Binding CaseRegisterViewCommand}" Margin="10 0 10 30" />
+            <RadioButton Content="- Main Page" Foreground="white" FontWeight="DemiBold" FontSize="14" IsChecked="True" Style="{StaticResource MenuItemTemplate}" Command="{Binding MainPageCommand}" Margin="0 0 0 25" />
 
-            <RadioButton Content="View Users" Foreground="white" FontSize="14" Style="{StaticResource MenuItemTemplate}" Command="{Binding UserViewCommand}" Margin="10 0 10 10" />
-            <RadioButton Content="View Cases" Foreground="white" FontSize="14" Style="{StaticResource MenuItemTemplate}" Command="{Binding CaseViewCommand}" Margin="10 0 10 10" />
+            <Image HorizontalAlignment="center" Height="117" Width="116" Margin="0 10 0 5">
+                <Image.Source>
+                    <BitmapImage UriSource="Images/add-user.png"/>
+                </Image.Source>
+            </Image>
+
+            <RadioButton Content="- Register User" Foreground="white" FontWeight="DemiBold" FontSize="14" Style="{StaticResource MenuItemTemplate}" Command="{Binding UserRegisterViewCommand}" Margin="0 0 0 0" />
+            <RadioButton Content="- Register Case" Foreground="white" FontWeight="DemiBold" FontSize="14" Style="{StaticResource MenuItemTemplate}" Command="{Binding CaseRegisterViewCommand}" Margin="0 0 0 25" />
+
+            <Image HorizontalAlignment="center" Height="117" Width="116" Margin="0 10 0 5">
+                <Image.Source>
+                    <BitmapImage UriSource="Images/view-user.png"/>
+                </Image.Source>
+            </Image>
+
+            <RadioButton Content="- View Users" Foreground="white" FontWeight="DemiBold" FontSize="14" Style="{StaticResource MenuItemTemplate}" Command="{Binding UserViewCommand}" Margin="0 0 0 0" />
+            <RadioButton Content="- View Cases" Foreground="white" FontWeight="DemiBold" FontSize="14" Style="{StaticResource MenuItemTemplate}" Command="{Binding CaseViewCommand}" Margin="0 0 0 0" />
 
         </StackPanel>
 
-        <ContentControl Grid.Column="1" Margin="10" Content="{Binding CurrentView}"/>
+        <ContentControl Grid.Column="1" Margin="0" Content="{Binding CurrentView}" />
+
     </Grid>
 </Window>

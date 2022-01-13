@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace Management_System_Sql_EFC_Database.Utilities
 {
-    internal interface ICaseUtility
+    internal interface IUserUtility
     {
         bool CreateUser(string firstname, string lastname, string email, int phonenumber, string streetname, int postalcode, string city, string country);
         IEnumerable<User> GetUsers();
     }
 
-    internal class UserUtility : ICaseUtility
+    internal class UserUtility : IUserUtility
     {
         private readonly SqlContext _context = new SqlContext();
 
@@ -33,7 +33,7 @@ namespace Management_System_Sql_EFC_Database.Utilities
                     PostalCode = postalcode,
                     City = city,
                     Country = country
-                });
+                }) ;
                 _context.SaveChanges();
                 return true;
             }

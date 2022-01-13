@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Management_System_Sql_EFC_Database.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -20,9 +20,40 @@ namespace Management_System_Sql_EFC_Database.Views
     /// </summary>
     public partial class UserRegisterView : UserControl
     {
+        private readonly UserUtility userUtility = new UserUtility();
+
         public UserRegisterView()
         {
             InitializeComponent();
+            ClearForms();
+        }
+
+        private void AddSubmit_Click(object sender, RoutedEventArgs e)
+        {
+            if(!string.IsNullOrEmpty(AddFirstName.Text) && !string.IsNullOrEmpty(AddLastName.Text) && !string.IsNullOrEmpty(AddEmail.Text))
+            {
+                if (userUtility.CreateUser(AddFirstName.Text, AddLastName.Text, AddEmail.Text, Convert.ToInt32(AddPhone.Text), AddStreetName.Text, Convert.ToInt32(AddPostalCode.Text), AddCity.Text, AddCountry.Text))
+                {
+                    AddSucess.Content = "You've successfully created a User!";
+                    ClearForms();
+                }
+
+                else
+                   AddError.Content = "A User with the same Email already exist!\nTry Again!";
+                    ClearForms();
+            }
+        }
+
+        private void ClearForms()
+        {
+            AddFirstName.Text = "";
+            AddLastName.Text =  "";
+            AddEmail.Text = "";
+            AddPhone.Text = "";
+            AddStreetName.Text = "";
+            AddPostalCode.Text = "";
+            AddCity.Text = "";
+            AddCountry.Text = "";
         }
     }
 }

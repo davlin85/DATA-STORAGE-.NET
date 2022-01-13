@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Management_System_Sql_EFC_Database.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,17 @@ namespace Management_System_Sql_EFC_Database.Views
     /// </summary>
     public partial class MainPageView : UserControl
     {
+        private readonly IUserUtility userUtility = new UserUtility();
+
         public MainPageView()
         {
             InitializeComponent();
+
+            lvUsers.Items.Clear();
+            foreach (var user in userUtility.GetUsers())
+            {
+                lvUsers.Items.Add(user);
+            }
         }
     }
 }

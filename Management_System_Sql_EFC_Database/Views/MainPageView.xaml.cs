@@ -29,13 +29,13 @@ namespace Management_System_Sql_EFC_Database.Views
             InitializeComponent();
 
             lvUsers.Items.Clear();
-            foreach (var user in userUtility.GetAllUsers())
+            foreach (var user in userUtility.Get10Users())
             {
                 lvUsers.Items.Add(user);
             }
 
             lvCases.Items.Clear();
-            foreach (var Case in caseUtility.GetAllCases())
+            foreach (var Case in caseUtility.Get10Cases())
             {
                 lvCases.Items.Add(Case);
             }

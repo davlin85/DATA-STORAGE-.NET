@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Management_System_Sql_EFC_Database.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,14 +16,19 @@ using System.Windows.Shapes;
 
 namespace Management_System_Sql_EFC_Database.Views
 {
-    /// <summary>
-    /// Interaction logic for UserView.xaml
-    /// </summary>
     public partial class UserView : UserControl
     {
+        private readonly IUserUtility userUtility = new UserUtility();
+
         public UserView()
         {
             InitializeComponent();
+
+            lvUsers.Items.Clear();
+            foreach (var user in userUtility.GetAllUsers())
+            {
+                lvUsers.Items.Add(user);
+            }
         }
     }
 }

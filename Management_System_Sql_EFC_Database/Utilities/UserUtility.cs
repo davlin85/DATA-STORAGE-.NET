@@ -11,6 +11,7 @@ namespace Management_System_Sql_EFC_Database.Utilities
     internal interface IUserUtility
     {
         bool CreateUser(string firstname, string lastname, string email, string phonenumber, string streetname, string postalcode, string city, string country);
+        IEnumerable<User> Get10Users();
         IEnumerable<User> GetAllUsers();
     }
 
@@ -40,9 +41,15 @@ namespace Management_System_Sql_EFC_Database.Utilities
             return false;
         }
 
+        public IEnumerable<User> Get10Users()
+        {
+            return _context.Users.OrderByDescending(p => p.Id).Take(10);
+        }
+
         public IEnumerable<User> GetAllUsers()
         {
-            return _context.Users;
+            return _context.Users.OrderByDescending(p => p.Id);
         }
+
     }
 }

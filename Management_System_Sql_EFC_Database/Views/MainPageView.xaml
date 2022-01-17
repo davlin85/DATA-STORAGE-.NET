@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Management_System_Sql_EFC_Database.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="680" d:DesignWidth="1065">
+             d:DesignHeight="830" d:DesignWidth="1065">
 
     <Grid Background="#E7E7E7">
         <Grid.RowDefinitions>
@@ -20,54 +20,64 @@
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Text="Welcome to Management System" FontSize="24" FontWeight="DemiBold" Padding="30 20 0 50" />
-                <TextBlock Text="    - View the latest Users and Cases" FontSize="16" Padding="30 50 0 40" />
-
-                <TextBlock Text="10 latest Users" FontSize="15" FontWeight="DemiBold" Padding="30 120 0 20" />
-
             </Grid>
+
+            <TextBlock Text="Welcome to Management System" FontSize="24" FontWeight="DemiBold" Padding="30 20 0 0" />
+            <TextBlock Text="    - View the latest Users and Cases" FontSize="16" Padding="30 0 0 50" />
+
+            <TextBlock Text="10 latest Users" FontSize="15" FontWeight="DemiBold" Padding="30 0 0 20" />
 
             <Grid Margin="5">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.3*" />
-                    <ColumnDefinition Width="0.6*" />
-                    <ColumnDefinition Width="0.6*" />
-                    <ColumnDefinition Width="1.5*" />
+                    <ColumnDefinition Width="0.2*" />
+                    <ColumnDefinition Width="0.5*" />
+                    <ColumnDefinition Width="0.5*" />
                     <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="0.6*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="0.5*" />
+                    <ColumnDefinition Width="0.6*" />
+                    <ColumnDefinition Width="0.3*" />
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Grid.Column="0" FontSize="13" FontWeight="DemiBold" Text="Id" Margin="30 0 0 0"/>
+                <TextBlock Grid.Column="0" FontSize="13" FontWeight="DemiBold" Text="Id" Margin="10 0 0 0"/>
                 <TextBlock Grid.Column="1" FontSize="13" FontWeight="DemiBold" Text="First Name" Margin="0 0 0 0"/>
                 <TextBlock Grid.Column="2" FontSize="13" FontWeight="DemiBold" Text="Last Name" Margin="0 0 0 0"/>
                 <TextBlock Grid.Column="3" FontSize="13" FontWeight="DemiBold" Text="Email" Margin="0 0 0 0"/>
-                <TextBlock Grid.Column="4" FontSize="13" FontWeight="DemiBold" Margin="-20 0 30 0"/>
+                <TextBlock Grid.Column="4" FontSize="13" FontWeight="DemiBold" Text="Phone Number" Margin="0 0 0 0"/>
+                <TextBlock Grid.Column="5" FontSize="13" FontWeight="DemiBold" Margin="0 0 0 0"/>
             </Grid>
 
 
-        </StackPanel>
 
 
-        <ListView x:Name="lvUsers" DataContext="Wpf.Models.User" Grid.Row="0" BorderThickness="1" Background="#DFDEDE" HorizontalContentAlignment="Stretch" VerticalAlignment="Stretch" Margin="0 190 0 0">
+
+            <ListView x:Name="lvUsers" DataContext="Wpf.Models.User" Grid.Row="0" BorderThickness="0.7" Background="#E3E1E1" HorizontalContentAlignment="Stretch" VerticalAlignment="Stretch" Margin="0 0 0 0">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="0.3*" />
-                            <ColumnDefinition Width="0.6*" />
-                            <ColumnDefinition Width="0.6*" />
-                            <ColumnDefinition Width="1.5*" />
-                            <ColumnDefinition Width="1*" />
-                        </Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.2*" />
+                                <ColumnDefinition Width="0.5*" />
+                                <ColumnDefinition Width="0.5*" />
+                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="0.6*" />
+                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="0.5*" />
+                                <ColumnDefinition Width="0.6*" />
+                                <ColumnDefinition Width="0.3*" />
+                            </Grid.ColumnDefinitions>
 
-                        <TextBlock Grid.Column="0" Text="{Binding Id}" Margin="30 0 0 0" />
+                        <TextBlock Grid.Column="0" Text="{Binding Id}" Margin="10 0 0 0" />
                         <TextBlock Grid.Column="1" Text="{Binding FirstName}" Margin="0 0 0 0"/>
                         <TextBlock Grid.Column="2" Text="{Binding LastName}" Margin="0 0 0 0"/>
                         <TextBlock Grid.Column="3" Text="{Binding Email}" Margin="0 0 0 0"/>
-                        <TextBlock Grid.Column="4" Margin="-20 0 30 0"/>
+                            <TextBlock Grid.Column="4" Text="{Binding PhoneNumber}" Margin="0 0 0 0"/>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        </StackPanel>
 
         <StackPanel Grid.Row="1" Margin="0 50 0 0">
             <Grid>
@@ -82,7 +92,7 @@
 
             <Grid Margin="5">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.3*" />
+                    <ColumnDefinition Width="0.23*" />
                     <ColumnDefinition Width="1.4*" />
                     <ColumnDefinition Width="1.8*" />
                     <ColumnDefinition Width="0.7*" />
@@ -90,20 +100,20 @@
                     <ColumnDefinition Width="0.7*" />
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Grid.Column="0" FontSize="13" FontWeight="DemiBold" Text="Id" Margin="30 0 0 0"/>
-                <TextBlock Grid.Column="1" FontSize="13" FontWeight="DemiBold" Text="Head Line" Margin="0 0 0 0"/>
+                <TextBlock Grid.Column="0" FontSize="13" FontWeight="DemiBold" Text="Id" Margin="10 0 0 0"/>
+                <TextBlock Grid.Column="1" FontSize="13" FontWeight="DemiBold" Text="Head Line" Margin="0 0 0 0" Grid.ColumnSpan="2"/>
                 <TextBlock Grid.Column="2" FontSize="13" FontWeight="DemiBold" Text="Description" Margin="0 0 0 0"/>
                 <TextBlock Grid.Column="3" FontSize="13" FontWeight="DemiBold" Text="Status" Margin="0 0 0 0"/>
                 <TextBlock Grid.Column="4" FontSize="13" FontWeight="DemiBold" Text="User" Margin="0 0 0 0"/>
-                <TextBlock Grid.Column="5" FontSize="13" FontWeight="DemiBold" Text="Date" Margin="-20 0 30 0"/>
+                <TextBlock Grid.Column="5" FontSize="13" FontWeight="DemiBold" Text="Date" Margin="-10 0 0 0"/>
             </Grid>
 
-            <ListView x:Name="lvCases" DataContext="Wpf.Models.User" Grid.Row="0" BorderThickness="1" Background="#DFDEDE" HorizontalContentAlignment="Stretch" VerticalAlignment="Stretch" Margin="0 0 0 0">
+            <ListView x:Name="lvCases" DataContext="Wpf.Models.Cases" Grid.Row="1" BorderThickness="0.7" Background="#E3E1E1" HorizontalContentAlignment="Stretch" VerticalAlignment="Stretch" Margin="0 0 0 0">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="0.3*" />
+                                <ColumnDefinition Width="0.23*" />
                                 <ColumnDefinition Width="1.4*" />
                                 <ColumnDefinition Width="1.8*" />
                                 <ColumnDefinition Width="0.7*" />
@@ -111,12 +121,12 @@
                                 <ColumnDefinition Width="0.7*" />
                             </Grid.ColumnDefinitions>
 
-                            <TextBlock Grid.Column="0" Text="{Binding Id}" Margin="30 0 0 0" />
+                            <TextBlock Grid.Column="0" Text="{Binding Id}" Margin="10 0 0 0" />
                             <TextBlock Grid.Column="1" MaxWidth="230" HorizontalAlignment="Left" FontWeight="DemiBold" Text="{Binding HeadLine}" Margin="0 0 0 0"/>
                             <TextBlock Grid.Column="2" MaxWidth="260" HorizontalAlignment="Left" Text="{Binding Description}" Margin="0 0 0 0"/>
                             <TextBlock Grid.Column="3" Text="{Binding Status.StatusName}" Margin="0 0 0 0"/>
                             <TextBlock Grid.Column="4" MaxWidth="150" HorizontalAlignment="Left" Text="{Binding User.FirstLastName}" Margin="0 0 0 0"/>
-                            <TextBlock Grid.Column="5" Text="{Binding DateTime}" Margin="-20 0 30 0"/>
+                            <TextBlock Grid.Column="5" Text="{Binding DateTime}" Margin="-10 0 0 0"/>
                         </Grid>
                     </DataTemplate>
                 </ListView.ItemTemplate>

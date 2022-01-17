@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Management_System_Sql_EFC_Database"
         xmlns:viewModel="clr-namespace:Management_System_Sql_EFC_Database.Models.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow" Height="720" Width="1400">
+        Title="MainWindow" Height="830" Width="1600">
 
     <Window.DataContext>
         <viewModel:MainViewModel />
@@ -14,7 +14,7 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="135" />
+            <ColumnDefinition Width="125" />
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
@@ -25,7 +25,7 @@
                 </Image.Source>
             </Image>
 
-            <RadioButton Content="- Main Page" Foreground="white" FontWeight="DemiBold" FontSize="14" IsChecked="True" Style="{StaticResource MenuItemTemplate}"  Command="{Binding MainPageCommand}" Margin="0 0 0 25" />
+            <RadioButton Content="- Main Page" Foreground="white" FontWeight="DemiBold" FontSize="14" IsChecked="True" Style="{StaticResource MenuItemTemplate}"  Command="{Binding MainPageCommand}" Margin="0 0 0 35" />
 
             <Image HorizontalAlignment="center" Height="117" Width="100" Margin="0 10 0 0">
                 <Image.Source>
@@ -33,8 +33,9 @@
                 </Image.Source>
             </Image>
 
-            <RadioButton Content="- Register User" Foreground="white" FontWeight="DemiBold" FontSize="14" Style="{StaticResource MenuItemTemplate}" Command="{Binding UserRegisterViewCommand}" Margin="0 0 0 0" />
-            <RadioButton Content="- View Users    " Foreground="white" FontWeight="DemiBold" FontSize="14" Style="{StaticResource MenuItemTemplate}" Command="{Binding UserViewCommand}" Margin="0 0 0 25" />
+            <RadioButton Content="- View Users    " Foreground="white" FontWeight="DemiBold" FontSize="14" Style="{StaticResource MenuItemTemplate}" Command="{Binding UserViewCommand}" Margin="0 0 0 0" />
+            <RadioButton Content="- Register User" Foreground="white" FontWeight="DemiBold" FontSize="14" Style="{StaticResource MenuItemTemplate}" Command="{Binding UserRegisterViewCommand}" Margin="0 0 0 35" />
+            
 
             <Image HorizontalAlignment="center" Height="117" Width="100" Margin="0 10 0 0">
                 <Image.Source>
@@ -42,8 +43,9 @@
                 </Image.Source>
             </Image>
 
-            <RadioButton Content="- Register Case" Foreground="white" FontWeight="DemiBold" FontSize="14" Style="{StaticResource MenuItemTemplate}" Command="{Binding CaseRegisterViewCommand}" Margin="0 0 0 0" />
             <RadioButton Content="- View Cases    " Foreground="white" FontWeight="DemiBold" FontSize="14" Style="{StaticResource MenuItemTemplate}" Command="{Binding CaseViewCommand}" Margin="0 0 0 0" />
+            <RadioButton Content="- Register Case" Foreground="white" FontWeight="DemiBold" FontSize="14" Style="{StaticResource MenuItemTemplate}" Command="{Binding CaseRegisterViewCommand}" Margin="0 0 0 0" />
+ 
 
         </StackPanel>
 

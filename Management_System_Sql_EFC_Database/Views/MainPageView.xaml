@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Management_System_Sql_EFC_Database.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="830" d:DesignWidth="1065">
+             d:DesignHeight="830" d:DesignWidth="1465">
 
     <Grid Background="#E7E7E7">
         <Grid.RowDefinitions>
@@ -25,27 +25,30 @@
             <TextBlock Text="Welcome to Management System" FontSize="24" FontWeight="DemiBold" Padding="30 20 0 0" />
             <TextBlock Text="    - View the latest Users and Cases" FontSize="16" Padding="30 0 0 50" />
 
-            <TextBlock Text="10 latest Users" FontSize="15" FontWeight="DemiBold" Padding="30 0 0 20" />
+            <TextBlock Text="10 latest Users" FontSize="15" FontWeight="DemiBold" Padding="30 0 0 0" />
+            <TextBlock Text="(sorted by Id)" Padding="30 0 0 20" />
 
             <Grid Margin="5">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="0.2*" />
-                    <ColumnDefinition Width="0.5*" />
+                    <ColumnDefinition Width="0.6*" />
                     <ColumnDefinition Width="0.5*" />
                     <ColumnDefinition Width="1*" />
                     <ColumnDefinition Width="0.6*" />
                     <ColumnDefinition Width="1*" />
                     <ColumnDefinition Width="0.5*" />
                     <ColumnDefinition Width="0.6*" />
-                    <ColumnDefinition Width="0.3*" />
+                    <ColumnDefinition Width="0.4*" />
                 </Grid.ColumnDefinitions>
 
                 <TextBlock Grid.Column="0" FontSize="13" FontWeight="DemiBold" Text="Id" Margin="10 0 0 0"/>
-                <TextBlock Grid.Column="1" FontSize="13" FontWeight="DemiBold" Text="First Name" Margin="0 0 0 0"/>
-                <TextBlock Grid.Column="2" FontSize="13" FontWeight="DemiBold" Text="Last Name" Margin="0 0 0 0"/>
+                <TextBlock Grid.Column="1" FontSize="13" FontWeight="DemiBold" Text="Full Name" Margin="0 0 0 0"/>
                 <TextBlock Grid.Column="3" FontSize="13" FontWeight="DemiBold" Text="Email" Margin="0 0 0 0"/>
                 <TextBlock Grid.Column="4" FontSize="13" FontWeight="DemiBold" Text="Phone Number" Margin="0 0 0 0"/>
                 <TextBlock Grid.Column="5" FontSize="13" FontWeight="DemiBold" Margin="0 0 0 0"/>
+                <TextBlock Grid.Column="6" FontSize="13" FontWeight="DemiBold" Margin="0 0 0 0"/>
+                <TextBlock Grid.Column="7" FontSize="13" FontWeight="DemiBold" Margin="0 0 0 0"/>
+                <TextBlock Grid.Column="8" FontSize="13" FontWeight="DemiBold" Margin="0 0 0 0"/>
             </Grid>
 
 
@@ -58,21 +61,24 @@
                     <Grid>
                         <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="0.2*" />
-                                <ColumnDefinition Width="0.5*" />
+                                <ColumnDefinition Width="0.6*" />
                                 <ColumnDefinition Width="0.5*" />
                                 <ColumnDefinition Width="1*" />
                                 <ColumnDefinition Width="0.6*" />
                                 <ColumnDefinition Width="1*" />
                                 <ColumnDefinition Width="0.5*" />
                                 <ColumnDefinition Width="0.6*" />
-                                <ColumnDefinition Width="0.3*" />
+                                <ColumnDefinition Width="0.4*" />
                             </Grid.ColumnDefinitions>
 
-                        <TextBlock Grid.Column="0" Text="{Binding Id}" Margin="10 0 0 0" />
-                        <TextBlock Grid.Column="1" Text="{Binding FirstName}" Margin="0 0 0 0"/>
-                        <TextBlock Grid.Column="2" Text="{Binding LastName}" Margin="0 0 0 0"/>
-                        <TextBlock Grid.Column="3" Text="{Binding Email}" Margin="0 0 0 0"/>
+                            <TextBlock Grid.Column="0" Text="{Binding Id}" Margin="10 0 0 0" />
+                            <TextBlock Grid.Column="1" Text="{Binding FirstLastName}" Margin="0 0 0 0"/>
+                            <TextBlock Grid.Column="3" Text="{Binding Email}" Margin="0 0 0 0"/>
                             <TextBlock Grid.Column="4" Text="{Binding PhoneNumber}" Margin="0 0 0 0"/>
+                            <TextBlock Grid.Column="5" Margin="0 0 0 0"/>
+                            <TextBlock Grid.Column="6" Margin="0 0 0 0"/>
+                            <TextBlock Grid.Column="7" Margin="0 0 0 0"/>
+                            <TextBlock Grid.Column="8" Margin="0 0 0 0"/>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
@@ -87,8 +93,9 @@
                 </Grid.ColumnDefinitions>
 
             </Grid>
-            
-            <TextBlock Text="10 latest Cases" FontSize="15" FontWeight="DemiBold" Padding="30 10 0 20" />
+
+            <TextBlock Text="10 latest Cases" FontSize="15" FontWeight="DemiBold" Padding="30 10 0 0" />
+            <TextBlock Text="(sorted by Status and Date)" Padding="30 0 0 20" />
 
             <Grid Margin="5">
                 <Grid.ColumnDefinitions>
@@ -121,7 +128,7 @@
                                 <ColumnDefinition Width="0.7*" />
                             </Grid.ColumnDefinitions>
 
-                            <TextBlock Grid.Column="0" Text="{Binding Id}" Margin="10 0 0 0" />
+                            <TextBlock Grid.Column="0" Text="{Binding Id}" MouseLeftButtonUp="Test" Margin="10 0 0 0" />
                             <TextBlock Grid.Column="1" MaxWidth="230" HorizontalAlignment="Left" FontWeight="DemiBold" Text="{Binding HeadLine}" Margin="0 0 0 0"/>
                             <TextBlock Grid.Column="2" MaxWidth="260" HorizontalAlignment="Left" Text="{Binding Description}" Margin="0 0 0 0"/>
                             <TextBlock Grid.Column="3" Text="{Binding Status.StatusName}" Margin="0 0 0 0"/>
@@ -134,4 +141,4 @@
 
         </StackPanel>
     </Grid>
-</UserControl>
+</UserControl> 

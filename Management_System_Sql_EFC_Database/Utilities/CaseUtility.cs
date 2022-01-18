@@ -42,12 +42,13 @@ namespace Management_System_Sql_EFC_Database.Utilities
 
         public IEnumerable<Case> Get10Cases()
         {
-            return _context.Cases.Include(x => x.User).Include(x => x.Status).OrderByDescending(p => p.Id).Take(10);
+            return _context.Cases.Include(x => x.User).Include(x => x.Status).OrderBy(d => d.StatusId).ThenByDescending(d => d.DateTime).Take(10);
         }
 
         public IEnumerable<Case> GetAllCases()
         {
             return _context.Cases.Include(x => x.User).Include(x => x.Status).OrderByDescending(p => p.Id);
-        }
+        } 
+
     }
 }

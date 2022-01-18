@@ -9,10 +9,15 @@
 
   <ItemGroup>
     <None Remove="Images\add-case.png" />
+    <None Remove="Images\add-case01.png" />
     <None Remove="Images\add-user.png" />
+    <None Remove="Images\add-user01.png" />
     <None Remove="Images\system.png" />
+    <None Remove="Images\system01.png" />
     <None Remove="Images\view-case.png" />
+    <None Remove="Images\view-case01.png" />
     <None Remove="Images\view-user.png" />
+    <None Remove="Images\view-users01.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,10 +30,15 @@
 
   <ItemGroup>
     <Resource Include="Images\add-case.png" />
+    <Resource Include="Images\add-case01.png" />
     <Resource Include="Images\add-user.png" />
+    <Resource Include="Images\add-user01.png" />
     <Resource Include="Images\system.png" />
+    <Resource Include="Images\system01.png" />
     <Resource Include="Images\view-case.png" />
+    <Resource Include="Images\view-case01.png" />
     <Resource Include="Images\view-user.png" />
+    <Resource Include="Images\view-users01.png" />
   </ItemGroup>
 
 </Project>

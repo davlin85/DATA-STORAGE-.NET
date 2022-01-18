@@ -40,6 +40,12 @@ namespace Management_System_Sql_EFC_Database.Views
                 lvCases.Items.Add(Case);
             }
 
+
+        }
+
+        public void Test(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("Test");
         }
     }
 }

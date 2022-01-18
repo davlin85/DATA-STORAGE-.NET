@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Management_System_Sql_EFC_Database.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="680" d:DesignWidth="1165">
+             d:DesignHeight="830" d:DesignWidth="1465">
 
     <Grid Background="#E7E7E7">
         <Grid.RowDefinitions>
@@ -22,19 +22,18 @@
             <Grid Margin="5">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="0.2*" />
-                    <ColumnDefinition Width="0.5*" />
+                    <ColumnDefinition Width="0.6*" />
                     <ColumnDefinition Width="0.5*" />
                     <ColumnDefinition Width="1*" />
                     <ColumnDefinition Width="0.6*" />
                     <ColumnDefinition Width="1*" />
                     <ColumnDefinition Width="0.5*" />
                     <ColumnDefinition Width="0.6*" />
-                    <ColumnDefinition Width="0.3*" />
+                    <ColumnDefinition Width="0.4*" />
                 </Grid.ColumnDefinitions>
 
                 <TextBlock Grid.Column="0" FontSize="13" FontWeight="DemiBold" Text="Id" Margin="10 0 0 0"/>
-                <TextBlock Grid.Column="1" FontSize="13" FontWeight="DemiBold" Text="First Name" Margin="0 0 0 0"/>
-                <TextBlock Grid.Column="2" FontSize="13" FontWeight="DemiBold" Text="Last Name" Margin="0 0 0 0"/>
+                <TextBlock Grid.Column="1" FontSize="13" FontWeight="DemiBold" Text="Full Name" Margin="0 0 0 0"/>
                 <TextBlock Grid.Column="3" FontSize="13" FontWeight="DemiBold" Text="Email" Margin="0 0 0 0"/>
                 <TextBlock Grid.Column="4" FontSize="13" FontWeight="DemiBold" Text="Phone Number" Margin="0 0 0 0"/>
                 <TextBlock Grid.Column="5" FontSize="13" FontWeight="DemiBold" Text="Street Name" Margin="0 0 0 0"/>
@@ -53,19 +52,18 @@
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="0.2*" />
-                                <ColumnDefinition Width="0.5*" />
+                                <ColumnDefinition Width="0.6*" />
                                 <ColumnDefinition Width="0.5*" />
                                 <ColumnDefinition Width="1*" />
                                 <ColumnDefinition Width="0.6*" />
                                 <ColumnDefinition Width="1*" />
                                 <ColumnDefinition Width="0.5*" />
                                 <ColumnDefinition Width="0.6*" />
-                                <ColumnDefinition Width="0.3*" />
+                                <ColumnDefinition Width="0.4*" />
                             </Grid.ColumnDefinitions>
 
                             <TextBlock Grid.Column="0" Text="{Binding Id}" Margin="10 0 0 0" />
-                            <TextBlock Grid.Column="1" Text="{Binding FirstName}" Margin="0 0 0 0"/>
-                            <TextBlock Grid.Column="2" Text="{Binding LastName}" Margin="0 0 0 0"/>
+                            <TextBlock Grid.Column="1" Text="{Binding FirstLastName}" Margin="0 0 0 0"/>
                             <TextBlock Grid.Column="3" Text="{Binding Email}" Margin="0 0 0 0"/>
                             <TextBlock Grid.Column="4" Text="{Binding PhoneNumber}" Margin="0 0 0 0"/>
                             <TextBlock Grid.Column="5" Text="{Binding StreetName}" Margin="0 0 0 0"/>

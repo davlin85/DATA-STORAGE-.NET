@@ -36,7 +36,7 @@ namespace Management_System_Sql_EFC_Database.Utilities
 
         public IEnumerable<Status> GetAllStatus()
         {
-            return _context.Statuses;
+            return _context.Statuses.OrderBy(p => p.Id);
         }
     }
 }

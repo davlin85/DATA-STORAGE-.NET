@@ -5,10 +5,11 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Management_System_Sql_EFC_Database.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="680" d:DesignWidth="1165">
+             d:DesignHeight="830" d:DesignWidth="1465">
     
     <Grid Background="#E7E7E7">
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
@@ -16,33 +17,38 @@
         <TextBlock Text="Register User" FontSize="24" FontWeight="DemiBold" Padding="30 20 0 50" />
         <TextBlock Text="    - Register a new User to the Management System" FontSize="16" Padding="30 50 0 40" />
 
-        <StackPanel Grid.Column="0" Margin="30 110 40 10" >
+        <StackPanel Grid.Column="0" Margin="30 120 0 10" >
             <Label Content="First Name" FontSize="13" FontWeight="DemiBold" />
-            <TextBox x:Name="AddFirstName" Padding="3" Margin="0 0 0 10" />
+            <TextBox x:Name="AddFirstName" Padding="10" Margin="0 0 0 10" />
             <Label Content="Last Name" FontSize="13" FontWeight="DemiBold"/>
-            <TextBox x:Name="AddLastName" Padding="3" Margin="0 3 0 10" />
+            <TextBox x:Name="AddLastName" Padding="10" Margin="0 3 0 10" />
             <Label Content="Email" FontSize="13" FontWeight="DemiBold" />
-            <TextBox x:Name="AddEmail" Padding="3" Margin="0 3 0 10" />
+            <TextBox x:Name="AddEmail" Padding="10" Margin="0 3 0 10" />
             <Label Content="Phone Number" FontSize="13" FontWeight="DemiBold" />
-            <TextBox x:Name="AddPhone" Padding="3" Margin="0 3 0 10" />
+            <TextBox x:Name="AddPhone" Padding="10" Margin="0 3 0 10" />
 
-            <Label x:Name="AddError" Foreground="DarkRed" FontSize="14" Margin="20 40 0 0" FontWeight="DemiBold" HorizontalAlignment="Left" />
-            <Label x:Name="AddSucess" Foreground="DarkGreen" FontSize="14" Margin="20 -29 0 0" FontWeight="DemiBold" HorizontalAlignment="Left" />
+            <Label x:Name="AddError" Foreground="DarkRed"  FontSize="16" Margin="20 40 0 0" HorizontalAlignment="Left" />
+            <Label x:Name="AddSucess" Foreground="DarkGreen" FontSize="18" Margin="20 -29 0 0" HorizontalAlignment="Left" />
 
         </StackPanel>
+        
 
-        <StackPanel Grid.Column="1" Margin="30 110 70 10">
+        <StackPanel Grid.Column="1" Margin="30 120 0 10">
             <Label Content="Street Name" FontSize="13" FontWeight="DemiBold" />
-            <TextBox x:Name="AddStreetName" Padding="3" Margin="0 0 0 10" />
-            <Label Content="Postal Code (No spaces)" FontSize="13" FontWeight="DemiBold" />
-            <TextBox x:Name="AddPostalCode" Padding="3" Margin="0 3 0 10" />
+            <TextBox x:Name="AddStreetName" Padding="10" Margin="0 0 0 10" />
+            <Label Content="Postal Code" FontSize="13" FontWeight="DemiBold" />
+            <TextBox x:Name="AddPostalCode" Padding="10" Margin="0 3 0 10" />
             <Label Content="City" FontSize="13" FontWeight="DemiBold" />
-            <TextBox x:Name="AddCity" Padding="3" Margin="0 3 0 10" />
+            <TextBox x:Name="AddCity" Padding="10" Margin="0 3 0 10" />
             <Label Content="Country" FontSize="13" FontWeight="DemiBold" />
-            <TextBox x:Name="AddCountry" Padding="3" Margin="0 3 0 40" />
+            <TextBox x:Name="AddCountry" Padding="10" Margin="0 3 0 30" />
+            
+            <Button x:Name="AddSubmit" Foreground="Black" Background="#51AAD0" FontWeight="DemiBold" FontSize="12" Content="Register User" Padding="0 15 0 15" Margin="270 0 0 0" Click="AddSubmit_Click" />
+        
+        </StackPanel>
 
-            <Button x:Name="AddSubmit" Foreground="Black" Background="#51AAD0" FontWeight="DemiBold" FontSize="13" Content="Register User" Padding="0 10 0 10" Margin="0 0 0 0" Click="AddSubmit_Click" />
-
+        <StackPanel Grid.Column="2" Margin="30 110 70 10">
+           
         </StackPanel>
 
 

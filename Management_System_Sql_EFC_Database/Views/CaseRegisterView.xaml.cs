@@ -16,9 +16,6 @@ using System.Windows.Shapes;
 
 namespace Management_System_Sql_EFC_Database.Views
 {
-    /// <summary>
-    /// Interaction logic for CaseRegisterView.xaml
-    /// </summary>
     public partial class CaseRegisterView : UserControl
     {
         private readonly ICaseUtility caseUtility = new CaseUtility();

@@ -42,12 +42,14 @@ namespace Management_System_Sql_EFC_Database.Views
             {
                 if (userUtility.CreateUser(AddFirstName.Text, AddLastName.Text, AddEmail.Text, AddPhone.Text, AddStreetName.Text, AddPostalCode.Text, AddCity.Text, AddCountry.Text))
                 {
-                    AddSucess.Content = "You've successfully created a User!";
+                    AddSucess.Content = "You've successfully Registered a User!";
                     ClearForms();
                 }
 
                 else
-                    AddError.Content = "A User with the same Email already exist!\nTry Again!";
+                    AddError.Content = "A User with the same Email already exist!\n" +
+                                        "Or you haven't filled in all the fields.\n\n" +
+                                        "Try again!";
                 ClearForms();
             }
         }

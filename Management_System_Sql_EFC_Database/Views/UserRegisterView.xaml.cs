@@ -16,9 +16,6 @@ using System.Windows.Shapes;
 
 namespace Management_System_Sql_EFC_Database.Views
 {
-    /// <summary>
-    /// Interaction logic for UserRegisterView.xaml
-    /// </summary>
     public partial class UserRegisterView : UserControl
     {
         private readonly UserUtility userUtility = new UserUtility();

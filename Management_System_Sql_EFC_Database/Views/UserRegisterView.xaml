@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Management_System_Sql_EFC_Database.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="830" d:DesignWidth="1465">
+             d:DesignHeight="870" d:DesignWidth="1465">
     
     <Grid Background="#E7E7E7">
         <Grid.ColumnDefinitions>
@@ -43,7 +43,7 @@
             <Label Content="Country" FontSize="13" FontWeight="DemiBold" />
             <TextBox x:Name="AddCountry" Padding="10" Margin="0 3 0 30" />
             
-            <Button x:Name="AddSubmit" Foreground="Black" Background="#51AAD0" FontWeight="DemiBold" FontSize="12" Content="Register User" Padding="0 15 0 15" Margin="270 0 0 0" Click="AddSubmit_Click" />
+            <Button x:Name="AddSubmit" Foreground="Black" Background="#51AAD0" FontWeight="DemiBold" FontSize="14" Content="Register User" Padding="0 15 0 15" Margin="270 0 0 0" Click="AddSubmit_Click" />
         
         </StackPanel>
 

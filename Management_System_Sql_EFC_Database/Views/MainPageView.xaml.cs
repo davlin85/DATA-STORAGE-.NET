@@ -1,6 +1,7 @@
 ﻿using Management_System_Sql_EFC_Database.Utilities;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,9 +17,6 @@ using System.Windows.Shapes;
 
 namespace Management_System_Sql_EFC_Database.Views
 {
-    /// <summary>
-    /// Interaction logic for MainPageView.xaml
-    /// </summary>
     public partial class MainPageView : UserControl
     {
         private readonly IUserUtility userUtility = new UserUtility();
@@ -39,13 +37,6 @@ namespace Management_System_Sql_EFC_Database.Views
             {
                 lvCases.Items.Add(Case);
             }
-
-
-        }
-
-        public void Test(object sender, MouseButtonEventArgs e)
-        {
-            MessageBox.Show("Test");
         }
     }
 }

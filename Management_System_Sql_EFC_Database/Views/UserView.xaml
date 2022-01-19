@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Management_System_Sql_EFC_Database.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="830" d:DesignWidth="1465">
+             d:DesignHeight="870" d:DesignWidth="1465">
 
     <Grid Background="#E7E7E7">
         <Grid.RowDefinitions>
@@ -17,7 +17,8 @@
             <TextBlock Text="View Users" FontSize="24" FontWeight="DemiBold" Padding="30 20 0 0" />
             <TextBlock Text="    - View all the Users in the Management System" FontSize="16" Padding="30 0 0 50" />
 
-            <TextBlock Text="Users" FontSize="15" FontWeight="DemiBold" Padding="30 0 0 20" />
+            <TextBlock Text="Users" FontSize="15" FontWeight="DemiBold" Padding="30 0 0 0" />
+            <TextBlock Text="(sorted by Id)" Padding="30 0 0 20" />
 
             <Grid Margin="5">
                 <Grid.ColumnDefinitions>

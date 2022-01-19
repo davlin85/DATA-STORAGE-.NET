@@ -21,11 +21,12 @@ namespace Management_System_Sql_EFC_Database.Data
         public virtual DbSet<Case> Cases { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Status> Statuses { get; set; }
+        public virtual DbSet<Admin> Admins { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
-                optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\david\OneDrive\Dokument\Webbutvecklare\WIN21\GITHUB\DATA\Management_System_Sql_EFC_Database\Data\sql_database_EFC.mdf;Integrated Security=True;Connect Timeout=30");
+                optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\david\OneDrive\Dokument\Webbutvecklare\WIN21\GITHUB\DATA\Management_System_Sql_EFC_Database\Data\sql_database.mdf;Integrated Security=True;Connect Timeout=30");
         }
     }
 }

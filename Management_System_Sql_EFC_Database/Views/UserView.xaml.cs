@@ -30,5 +30,6 @@ namespace Management_System_Sql_EFC_Database.Views
                 lvUsers.Items.Add(user);
             }
         }
+
     }
 }

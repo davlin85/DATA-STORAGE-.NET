@@ -21,6 +21,7 @@ namespace Management_System_Sql_EFC_Database.Views
         private readonly ICaseUtility caseUtility = new CaseUtility();
         private readonly IUserUtility userUtility = new UserUtility();
         private readonly IStatusUtility statusUtility = new StatusUtility();
+        private readonly IAdminUtility adminUtility = new AdminUtility();
 
         public CaseRegisterView()
         {
@@ -32,16 +33,20 @@ namespace Management_System_Sql_EFC_Database.Views
             AddStatus.SelectedValuePath = "Key";
             AddStatus.DisplayMemberPath = "Value";
 
+            AddAdmin.SelectedValuePath = "Key";
+            AddAdmin.DisplayMemberPath = "Value";
+
             ClearForms();
             GetUser();
             GetStatus();
+            GetAdmin();
         }
 
         private void AddSubmit_Click(object sender, RoutedEventArgs e)
         {
             if (!string.IsNullOrEmpty(AddHeadLine.Text) && !string.IsNullOrEmpty(AddDescription.Text))
             {
-                if (caseUtility.CreateCase(AddHeadLine.Text, AddDescription.Text, DateTime.Now, (int)AddUser.SelectedValue, (int)AddStatus.SelectedValue))
+                if (caseUtility.CreateCase(AddHeadLine.Text, AddDescription.Text, DateTime.Now, (int)AddUser.SelectedValue, (int)AddStatus.SelectedValue, (int)AddAdmin.SelectedValue))
                 {
                     AddSucess.Content = "You've successfully created a Case!";
                     ClearForms();
@@ -72,12 +77,16 @@ namespace Management_System_Sql_EFC_Database.Views
 
         private void GetStatus()
         {
-
             AddStatus.Items.Clear();
             foreach (var status in statusUtility.GetAllStatus())
                 AddStatus.Items.Add(new KeyValuePair<int, string>(status.Id, status.StatusName));
         }
 
-
+        private void GetAdmin()
+        {
+            AddAdmin.Items.Clear();
+            foreach (var admin in adminUtility.GetAllAdmin())
+                AddAdmin.Items.Add(new KeyValuePair<int, string>(admin.Id, admin.AdminName));
+        }
     }
 }

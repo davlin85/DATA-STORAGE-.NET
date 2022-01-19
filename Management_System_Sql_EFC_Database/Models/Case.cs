@@ -30,6 +30,10 @@ namespace Management_System_Sql_EFC_Database.Models
         public int StatusId { get; set; }
         public Status Status { get; set; }
 
+        [Required]
+        public int AdminId { get; set; }
+        public Admin Admin { get; set; }    
+
     }
 }
 

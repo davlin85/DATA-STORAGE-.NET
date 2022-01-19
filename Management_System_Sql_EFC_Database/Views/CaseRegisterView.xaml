@@ -5,10 +5,11 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Management_System_Sql_EFC_Database.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="680" d:DesignWidth="1165">
+             d:DesignHeight="870" d:DesignWidth="1465">
     
     <Grid Background="#E7E7E7">
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
@@ -16,31 +17,38 @@
         <TextBlock Text="Register Case" FontSize="24" FontWeight="DemiBold" Padding="30 20 0 50" />
         <TextBlock Text="    - Register a new Case to the Management System" FontSize="16" Padding="30 50 0 40" />
 
-        <StackPanel Grid.Column="0" Margin="30 110 40 10" >
+        <StackPanel Grid.Column="0" Margin="30 120 0 10" >
             <Label Content="Head Line" FontSize="13" FontWeight="DemiBold" />
-            <TextBox x:Name="AddHeadLine" Padding="3" Margin="0 0 0 10" />
+            <TextBox x:Name="AddHeadLine" Padding="10" Margin="0 0 0 10" />
 
             <Label Content="Description" FontSize="13" FontWeight="DemiBold" />
-            <TextBox x:Name="AddDescription" TextWrapping="Wrap" Height="130" Margin="0 0 0 30"/>
+            <TextBox x:Name="AddDescription" TextWrapping="Wrap" Height="100" Padding="10" Margin="0 0 0 10"/>
 
-            
+            <Label Content="User" FontSize="13" FontWeight="DemiBold" />
+            <ComboBox x:Name="AddUser" VerticalContentAlignment="center" Height="30" Margin="0 0 100 10" />
 
-            <Button x:Name="AddSubmit" Foreground="Black" Background="#51AAD0" FontWeight="DemiBold" FontSize="13" Content="Register User" Padding="0 10 0 10" Margin="0 0 0 0" Click="AddSubmit_Click" />
+            <Label Content="Status" FontSize="13" FontWeight="DemiBold" />
+            <ComboBox x:Name="AddStatus" VerticalContentAlignment="center" Height="30" Margin="0 0 100 10" />
+
+            <Label Content="Admin" FontSize="13" FontWeight="DemiBold" />
+            <ComboBox x:Name="AddAdmin" VerticalContentAlignment="center" Height="30" Margin="0 0 100 30" />
+
+            <Button x:Name="AddSubmit" Foreground="Black" Background="#51AAD0" FontWeight="DemiBold" FontSize="14" Content="Register Case" Padding="0 15 0 15" Margin="0 0 270 0" Click="AddSubmit_Click" />
 
 
         </StackPanel>
 
-        <StackPanel Grid.Column="1" Margin="30 110 70 10">
-            <Label Content="User" FontSize="13" FontWeight="DemiBold" />
-            <ComboBox x:Name="AddUser"  Margin="0 0 0 10" />
+        <StackPanel Grid.Column="1" Margin="30 120 0 10">
 
-            <Label Content="Status" FontSize="13" FontWeight="DemiBold" />
-            <ComboBox x:Name="AddStatus" Margin="0 0 0 10" />
-            
+
+
             <Label x:Name="AddError" Foreground="DarkRed" FontSize="14" Margin="20 40 0 0" HorizontalAlignment="Left" />
             <Label x:Name="AddSucess" Foreground="DarkGreen" FontSize="14" Margin="20 -29 0 0" HorizontalAlignment="Left" />
         </StackPanel>
 
+        <StackPanel Grid.Column="2" Margin="30 120 0 10">
+
+        </StackPanel>
 
     </Grid>
 </UserControl>

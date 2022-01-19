@@ -22,6 +22,27 @@ namespace Management_System_Sql_EFC_Database.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("Management_System_Sql_EFC_Database.Models.Admin", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("AdminName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AdminName")
+                        .IsUnique();
+
+                    b.ToTable("Admins");
+                });
+
             modelBuilder.Entity("Management_System_Sql_EFC_Database.Models.Case", b =>
                 {
                     b.Property<int>("Id")
@@ -29,6 +50,9 @@ namespace Management_System_Sql_EFC_Database.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("AdminId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("DateTime")
                         .HasColumnType("datetime2");
@@ -43,13 +67,15 @@ namespace Management_System_Sql_EFC_Database.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<int?>("StatusId")
+                    b.Property<int>("StatusId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("UserId")
+                    b.Property<int>("UserId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AdminId");
 
                     b.HasIndex("StatusId");
 
@@ -137,17 +163,34 @@ namespace Management_System_Sql_EFC_Database.Migrations
 
             modelBuilder.Entity("Management_System_Sql_EFC_Database.Models.Case", b =>
                 {
+                    b.HasOne("Management_System_Sql_EFC_Database.Models.Admin", "Admin")
+                        .WithMany("Cases")
+                        .HasForeignKey("AdminId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Management_System_Sql_EFC_Database.Models.Status", "Status")
                         .WithMany("Cases")
-                        .HasForeignKey("StatusId1");
+                        .HasForeignKey("StatusId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Management_System_Sql_EFC_Database.Models.User", "User")
                         .WithMany("Cases")
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Admin");
 
                     b.Navigation("Status");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Management_System_Sql_EFC_Database.Models.Admin", b =>
+                {
+                    b.Navigation("Cases");
                 });
 
             modelBuilder.Entity("Management_System_Sql_EFC_Database.Models.Status", b =>

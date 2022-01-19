@@ -11,7 +11,7 @@ namespace Management_System_Sql_EFC_Database.Utilities
 {
     internal interface ICaseUtility
     {
-        bool CreateCase(string headline, string description, DateTime dateTime, int userId, int statusId);
+        bool CreateCase(string headline, string description, DateTime dateTime, int userId, int statusId, int adminId);
         IEnumerable<Case> Get10Cases();
         IEnumerable<Case> GetAllCases();
     }
@@ -20,18 +20,19 @@ namespace Management_System_Sql_EFC_Database.Utilities
     {
         private readonly SqlContext _context = new SqlContext();
 
-        public bool CreateCase(string headline, string description, DateTime dateTime, int userId, int statusId)
+        public bool CreateCase(string headline, string description, DateTime dateTime, int userId, int statusId, int adminId)
         {
             var Case = _context.Cases.Where(x => x.HeadLine == headline).FirstOrDefault();
             if (Case == null)
-            {
+            { 
                 _context.Cases.Add(new Case
                 {
                     HeadLine = headline,
                     Description = description,
                     DateTime = dateTime,
                     UserId = userId,
-                    StatusId = statusId
+                    StatusId = statusId,
+                    AdminId = adminId
                 });
                 _context.SaveChanges();
                 return true;
@@ -42,12 +43,12 @@ namespace Management_System_Sql_EFC_Database.Utilities
 
         public IEnumerable<Case> Get10Cases()
         {
-            return _context.Cases.Include(x => x.User).Include(x => x.Status).OrderBy(d => d.StatusId).ThenByDescending(d => d.DateTime).Take(10);
+            return _context.Cases.Include(x => x.User).Include(x => x.Status).Include(x => x.Admin).OrderBy(d => d.StatusId).ThenByDescending(d => d.DateTime).Take(10);
         }
 
         public IEnumerable<Case> GetAllCases()
         {
-            return _context.Cases.Include(x => x.User).Include(x => x.Status).OrderByDescending(p => p.Id);
+            return _context.Cases.Include(x => x.User).Include(x => x.Status).Include(x => x.Admin).OrderByDescending(p => p.Id);
         } 
 
     }

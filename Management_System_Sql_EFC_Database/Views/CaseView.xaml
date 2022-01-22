@@ -25,9 +25,9 @@
                     <ColumnDefinition Width="0.23*" />
                     <ColumnDefinition Width="1.4*" />
                     <ColumnDefinition Width="1.8*" />
-                    <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="0.7*" />
-                    <ColumnDefinition Width="0.7*" />
+                    <ColumnDefinition Width="1.2*" />
+                    <ColumnDefinition Width="0.5*" />
+                    <ColumnDefinition Width="0.5*" />
                     <ColumnDefinition Width="0.7*" />
                 </Grid.ColumnDefinitions>
 
@@ -48,9 +48,9 @@
                                 <ColumnDefinition Width="0.23*" />
                                 <ColumnDefinition Width="1.4*" />
                                 <ColumnDefinition Width="1.8*" />
-                                <ColumnDefinition Width="1*" />
-                                <ColumnDefinition Width="0.7*" />
-                                <ColumnDefinition Width="0.7*" />
+                                <ColumnDefinition Width="1.2*" />
+                                <ColumnDefinition Width="0.5*" />
+                                <ColumnDefinition Width="0.5*" />
                                 <ColumnDefinition Width="0.7*" />
                             </Grid.ColumnDefinitions>
 
@@ -59,7 +59,7 @@
                             <TextBlock Grid.Column="0" Text="{Binding Id}" Margin="10 0 0 0" />
                             <TextBlock Grid.Column="1" MaxWidth="230" HorizontalAlignment="Left" FontWeight="DemiBold" Text="{Binding HeadLine}" Margin="0 0 0 0"/>
                             <TextBlock Grid.Column="2" MaxWidth="260" HorizontalAlignment="Left" Text="{Binding Description}" Margin="0 0 0 0"/>
-                            <TextBlock Grid.Column="3" Text="{Binding User.FirstLastName}" Margin="0 0 0 0"/>
+                            <TextBlock Grid.Column="3" Text="{Binding User.CaseView}" Margin="0 0 0 0"/>
                             <TextBlock Grid.Column="4" MaxWidth="150" HorizontalAlignment="Left" Text="{Binding Status.StatusName}" Margin="0 0 0 0"/>
                             <TextBlock Grid.Column="5" FontSize="13" Text="{Binding Admin.AdminName}" Margin="0 0 0 0"/>
                             <TextBlock Grid.Column="6" Text="{Binding DateTime}" Margin="-10 0 0 0"/>

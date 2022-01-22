@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Management_System_Sql_EFC_Database.Data;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -22,3 +23,4 @@ namespace Management_System_Sql_EFC_Database.Models
         public virtual ICollection<Case> Cases { get; set; }
     }
 }
+

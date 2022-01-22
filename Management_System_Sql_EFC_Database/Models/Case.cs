@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Management_System_Sql_EFC_Database.Data;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -7,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Management_System_Sql_EFC_Database.Models
 {
+   
     internal class Case
     {
         [Key]
@@ -32,8 +35,11 @@ namespace Management_System_Sql_EFC_Database.Models
 
         [Required]
         public int AdminId { get; set; }
-        public Admin Admin { get; set; }    
+        public Admin Admin { get; set; }
+
 
     }
+
+
 }
 

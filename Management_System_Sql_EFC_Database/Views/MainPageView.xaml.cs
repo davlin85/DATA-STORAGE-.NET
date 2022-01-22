@@ -1,4 +1,6 @@
-﻿using Management_System_Sql_EFC_Database.Utilities;
+﻿using Management_System_Sql_EFC_Database.Data;
+using Management_System_Sql_EFC_Database.Utilities;
+using Management_System_Sql_EFC_Database.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -21,22 +23,24 @@ namespace Management_System_Sql_EFC_Database.Views
     {
         private readonly IUserUtility userUtility = new UserUtility();
         private readonly ICaseUtility caseUtility = new CaseUtility();
+        private readonly IStatusUtility statusUtility = new StatusUtility();
 
         public MainPageView()
         {
             InitializeComponent();
-
-            lvUsers.Items.Clear();
-            foreach (var user in userUtility.Get10Users())
-            {
-                lvUsers.Items.Add(user);
-            }
 
             lvCases.Items.Clear();
             foreach (var Case in caseUtility.Get10Cases())
             {
                 lvCases.Items.Add(Case);
             }
+
+            lvUser.Items.Clear();
+            foreach (var Case in userUtility.Get10Users())
+            {
+                lvUser.Items.Add(Case);
+            }
+
         }
     }
 }

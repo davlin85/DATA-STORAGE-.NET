@@ -41,4 +41,11 @@
     <Resource Include="Images\view-users01.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Page Update="Templates\datagriditemtemplate.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
 </Project>

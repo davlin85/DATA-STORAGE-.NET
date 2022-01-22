@@ -1,14 +1,16 @@
 ﻿using Management_System_Sql_EFC_Database.Models;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Management_System_Sql_EFC_Database.Data
 {
-    internal class SqlContext :DbContext
+    internal class SqlContext : DbContext
     {
         public SqlContext()
         {
@@ -28,5 +30,6 @@ namespace Management_System_Sql_EFC_Database.Data
             if (!optionsBuilder.IsConfigured)
                 optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\david\OneDrive\Dokument\Webbutvecklare\WIN21\GITHUB\DATA\Management_System_Sql_EFC_Database\Data\sql_database.mdf;Integrated Security=True;Connect Timeout=30");
         }
+
     }
 }

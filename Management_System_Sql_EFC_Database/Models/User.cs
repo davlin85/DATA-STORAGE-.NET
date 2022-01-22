@@ -49,8 +49,9 @@ namespace Management_System_Sql_EFC_Database.Models
 
         [Required]
         [StringLength(50)]
-        public string FullName => $"{FirstName} {LastName} {Email}";
+        public string FullName => $"{FirstName} {LastName}, {Email}";
         public string FirstLastName => $"{FirstName} {LastName}";
+        public string CaseView => $"{FirstName} [{Email}]";
 
         public virtual ICollection<Case> Cases { get; set; }
     }

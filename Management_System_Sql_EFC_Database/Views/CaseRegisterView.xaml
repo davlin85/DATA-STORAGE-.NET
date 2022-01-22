@@ -31,9 +31,9 @@
             <ComboBox x:Name="AddStatus" VerticalContentAlignment="center" Height="30" Margin="0 0 100 10" />
 
             <Label Content="Admin" FontSize="13" FontWeight="DemiBold" />
-            <ComboBox x:Name="AddAdmin" VerticalContentAlignment="center" Height="30" Margin="0 0 100 30" />
+            <ComboBox x:Name="AddAdmin" VerticalContentAlignment="center" Height="30" Margin="0 0 100 50" />
 
-            <Button x:Name="AddSubmit" Foreground="Black" Background="#51AAD0" FontWeight="DemiBold" FontSize="14" Content="Register Case" Padding="0 15 0 15" Margin="0 0 270 0" Click="AddSubmit_Click" />
+            <Button x:Name="AddSubmit" Foreground="Black" Background="#51AAD0" FontWeight="DemiBold" FontSize="14" Content="Register Case" Padding="0 15 0 15" Margin="0 0 320 0" Click="AddSubmit_Click" />
 
 
         </StackPanel>

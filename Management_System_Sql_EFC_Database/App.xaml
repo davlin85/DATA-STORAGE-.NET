@@ -4,11 +4,13 @@
              xmlns:local="clr-namespace:Management_System_Sql_EFC_Database"
              xmlns:viewModel="clr-namespace:Management_System_Sql_EFC_Database.Models.ViewModels"
              xmlns:view="clr-namespace:Management_System_Sql_EFC_Database.Views"
-             StartupUri="MainWindow.xaml">
+             StartupUri="MainWindow.xaml"
+    xmlns:theme="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Templates/MenuItemTemplate.xaml" />
+                <ResourceDictionary Source="Templates/datagriditemtemplate.xaml" />
             </ResourceDictionary.MergedDictionaries>
             
             <DataTemplate DataType="{x:Type viewModel:CaseRegisterViewModel}">

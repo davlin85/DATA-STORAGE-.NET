@@ -31,7 +31,7 @@ namespace Management_System_Sql_EFC_Database.Views
             LoadGrid();
         }
 
-        public void clearData()
+        public void ClearForms()
         {
             AddId.Clear();
             AddFirstName.Clear();
@@ -65,8 +65,8 @@ namespace Management_System_Sql_EFC_Database.Views
             SqlCommand cmd = new SqlCommand("UPDATE Users SET FirstName = '"+AddFirstName.Text+"', LastName = '"+AddLastName.Text+"', Email = '"+AddEmail.Text+"', PhoneNumber = '"+AddPhoneNumber.Text+"', StreetName = '"+AddStreetName.Text+"', PostalCode = '"+AddPostalCode.Text+"', City = '"+AddCity.Text+"', Country = '"+AddCountry.Text+"' WHERE Id = '"+AddId.Text+"' ", con); 
 
             cmd.ExecuteNonQuery();
-            con.Close();    
-            clearData();
+            con.Close();
+            ClearForms();
             LoadGrid();
         }
 
@@ -79,14 +79,14 @@ namespace Management_System_Sql_EFC_Database.Views
 
             cmd.ExecuteNonQuery();
             con.Close();
-            clearData();
+            ClearForms();
             LoadGrid();
 
         }
 
         private void AddClear_Click(object sender, RoutedEventArgs e)
         {
-            clearData();
+            ClearForms();
             
         }
     }

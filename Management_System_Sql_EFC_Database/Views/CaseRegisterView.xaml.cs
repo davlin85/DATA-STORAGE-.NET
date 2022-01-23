@@ -57,7 +57,6 @@ namespace Management_System_Sql_EFC_Database.Views
                     AddError.Content = "Something went wrong!\nTry again!";
                     ClearForms();
                 }
-
             }
         }
 

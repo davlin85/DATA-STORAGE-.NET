@@ -19,10 +19,24 @@
 
         <StackPanel Grid.Column="0" Margin="30 120 0 10" >
             <Label Content="Head Line" FontSize="13" FontWeight="DemiBold" />
-            <TextBox x:Name="AddHeadLine" Padding="10" Margin="0 0 0 10" />
+
+            <TextBox x:Name="AddHeadLine" Padding="8" Margin="0 0 0 10" FontSize="13" HorizontalContentAlignment="Left" >
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
 
             <Label Content="Description" FontSize="13" FontWeight="DemiBold" />
-            <TextBox x:Name="AddDescription" TextWrapping="Wrap" Height="100" Padding="10" Margin="0 0 0 10"/>
+
+            <TextBox x:Name="AddDescription" Padding="8" Margin="0 0 0 10" TextWrapping="Wrap" Height="100" FontSize="13" HorizontalContentAlignment="Left" >
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
 
             <Label Content="User" FontSize="13" FontWeight="DemiBold" />
             <ComboBox x:Name="AddUser" VerticalContentAlignment="center" Height="30" Margin="0 0 100 10" />
@@ -33,7 +47,7 @@
             <Label Content="Admin" FontSize="13" FontWeight="DemiBold" />
             <ComboBox x:Name="AddAdmin" VerticalContentAlignment="center" Height="30" Margin="0 0 100 50" />
 
-            <Button x:Name="AddSubmit" Foreground="Black" Background="#51AAD0" FontWeight="DemiBold" FontSize="14" Content="Register Case" Padding="0 15 0 15" Margin="0 0 320 0" Click="AddSubmit_Click" />
+            <Button Style="{DynamicResource RoundCorner}" x:Name="AddSubmit" Foreground="white" Background="#51AAD0" FontWeight="DemiBold" FontSize="14" Content="Register Case" Padding="0 15 0 15" Margin="0 0 320 0" Click="AddSubmit_Click" />
 
 
         </StackPanel>

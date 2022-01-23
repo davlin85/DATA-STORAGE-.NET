@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Management_System_Sql_EFC_Database.Views"
              mc:Ignorable="d" 
              d:DesignHeight="870" d:DesignWidth="1465">
-    
+
     <Grid Background="#E7E7E7">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
@@ -19,36 +19,92 @@
 
         <StackPanel Grid.Column="0" Margin="30 120 0 10" >
             <Label Content="First Name" FontSize="13" FontWeight="DemiBold" />
-            <TextBox x:Name="AddFirstName" Padding="10" Margin="0 0 0 10" />
+            <TextBox x:Name="AddFirstName" Padding="8" Margin="0 0 0 10" FontSize="13" HorizontalContentAlignment="Left" >
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+
             <Label Content="Last Name" FontSize="13" FontWeight="DemiBold"/>
-            <TextBox x:Name="AddLastName" Padding="10" Margin="0 3 0 10" />
+            <TextBox x:Name="AddLastName" Padding="8" Margin="0 0 0 10" FontSize="13" HorizontalContentAlignment="Left" >
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+
             <Label Content="Email" FontSize="13" FontWeight="DemiBold" />
-            <TextBox x:Name="AddEmail" Padding="10" Margin="0 3 0 10" />
+            <TextBox x:Name="AddEmail" Padding="8" Margin="0 0 0 10" FontSize="13" HorizontalContentAlignment="Left" >
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+
             <Label Content="Phone Number" FontSize="13" FontWeight="DemiBold" />
-            <TextBox x:Name="AddPhone" Padding="10" Margin="0 3 0 10" />
+            <TextBox x:Name="AddPhone" Padding="8" Margin="0 0 0 10" FontSize="13" HorizontalContentAlignment="Left" >
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
 
             <Label x:Name="AddError" Foreground="DarkRed"  FontSize="16" Margin="20 40 0 0" HorizontalAlignment="Left" />
             <Label x:Name="AddSucess" Foreground="DarkGreen" FontSize="18" Margin="20 -29 0 0" HorizontalAlignment="Left" />
 
         </StackPanel>
-        
+
 
         <StackPanel Grid.Column="1" Margin="30 120 0 10">
             <Label Content="Street Name" FontSize="13" FontWeight="DemiBold" />
-            <TextBox x:Name="AddStreetName" Padding="10" Margin="0 0 0 10" />
+            <TextBox x:Name="AddStreetName" Padding="8" Margin="0 0 0 10" FontSize="13" HorizontalContentAlignment="Left" >
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+
             <Label Content="Postal Code" FontSize="13" FontWeight="DemiBold" />
-            <TextBox x:Name="AddPostalCode" Padding="10" Margin="0 3 0 10" />
+            <TextBox x:Name="AddPostalCode" Padding="8" Margin="0 0 0 10" FontSize="13" HorizontalContentAlignment="Left" >
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+
             <Label Content="City" FontSize="13" FontWeight="DemiBold" />
-            <TextBox x:Name="AddCity" Padding="10" Margin="0 3 0 10" />
+            <TextBox x:Name="AddCity" Padding="8" Margin="0 0 0 10" FontSize="13" HorizontalContentAlignment="Left" >
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+
             <Label Content="Country" FontSize="13" FontWeight="DemiBold" />
-            <TextBox x:Name="AddCountry" Padding="10" Margin="0 3 0 50" />
-            
-            <Button x:Name="AddSubmit" Foreground="Black" Background="#51AAD0" FontWeight="DemiBold" FontSize="14" Content="Register User" Padding="0 15 0 15" Margin="320 0 0 0" Click="AddSubmit_Click" />
-        
+            <TextBox x:Name="AddCountry" Padding="8" Margin="0 0 0 50" FontSize="13" HorizontalContentAlignment="Left" >
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+
+
+
+            <Button Style="{DynamicResource RoundCorner}" x:Name="AddSubmit" Foreground="white" Background="#51AAD0" FontWeight="DemiBold" FontSize="14" Content="Register User" Padding="0 15 0 15" Margin="320 0 0 0" Click="AddSubmit_Click" />
+
         </StackPanel>
 
         <StackPanel Grid.Column="2" Margin="30 110 70 10">
-           
+
         </StackPanel>
 
 

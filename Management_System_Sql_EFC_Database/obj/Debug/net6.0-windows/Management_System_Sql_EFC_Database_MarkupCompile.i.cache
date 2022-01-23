@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\david\OneDrive\Dokument\Webbutvecklare\WIN21\GITHUB\DATA\Management_System_Sql_EFC_Database\App.xaml
-8-1815691570
+945630755
 
 30-1475778611
 214-497381747
-MainWindow.xaml;Templates\DataGridItemTemplate.xaml;Templates\MenuItemTemplate.xaml;Views\CaseRegisterView.xaml;Views\CaseView.xaml;Views\MainPageView.xaml;Views\UserRegisterView.xaml;Views\UserView.xaml;
+MainWindow.xaml;Templates\ButtonTemplate.xaml;Templates\DataGridItemTemplate.xaml;Templates\MenuItemTemplate.xaml;Views\CaseRegisterView.xaml;Views\CaseView.xaml;Views\MainPageView.xaml;Views\UserRegisterView.xaml;Views\UserView.xaml;
 
-True
+False
 

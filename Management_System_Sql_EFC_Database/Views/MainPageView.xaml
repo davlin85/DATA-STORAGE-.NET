@@ -27,60 +27,49 @@
 
             <TextBlock Text="10 latest Users" FontSize="15" FontWeight="DemiBold" Padding="30 0 0 0" />
             <TextBlock Text="(sorted by Id)" Padding="30 0 0 20" />
-            
-            
 
-            <Grid Margin="5">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.2*" />
-                    <ColumnDefinition Width="0.6*" />
-                    <ColumnDefinition Width="0.5*" />
-                    <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="0.6*" />
-                    <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="0.5*" />
-                    <ColumnDefinition Width="0.6*" />
-                    <ColumnDefinition Width="0.4*" />
-                </Grid.ColumnDefinitions>
+            <DataGrid RowStyle="{DynamicResource DataGridItemTemplate}" ColumnHeaderStyle="{DynamicResource DataGridItemTemplate}"
+                x:Name="datagrid2" 
+                IsReadOnly="True"
+                AutoGenerateColumns="False"
+                ItemsSource="{Binding Users, UpdateSourceTrigger=PropertyChanged}"
+                Margin="30 10 30 0"
+                      Padding="0 0 0 0">
+                <DataGrid.Columns>
+                    <DataGridTextColumn 
+                       Header="Id"
+                        MinWidth="30"
+                        Width="30" 
+                        Binding="{Binding Id}" />
+                    <DataGridTextColumn 
+                       Header="First Name"
+                        MinWidth="150"
+                        Width="*" 
+                        FontWeight="DemiBold"
+                        Binding="{Binding FirstName}" />
+                    <DataGridTextColumn 
+                       Header="Last Name"
+                        MinWidth="150"
+                        Width="*"
+                        FontWeight="DemiBold"
+                        Binding="{Binding LastName}" />
+                    <DataGridTextColumn 
+                       Header="Email"
+                        MinWidth="250"
+                        Width="*" 
+                        Binding="{Binding Email}"/>
+                    <DataGridTextColumn 
+                       Header="Phone Number"
+                        MinWidth="150"
+                        Width="*" 
+                        Binding="{Binding PhoneNumber}"/>
+                    <DataGridTextColumn 
+                        MinWidth="600"
+                        Width="600" />
+                </DataGrid.Columns>
+            </DataGrid>
 
-                <TextBlock Grid.Column="0" FontSize="13" FontWeight="DemiBold" Text="Id" Margin="10 0 0 0"/>
-                <TextBlock Grid.Column="1" FontSize="13" FontWeight="DemiBold" Text="Full Name" Margin="0 0 0 0"/>
-                <TextBlock Grid.Column="3" FontSize="13" FontWeight="DemiBold" Text="Email" Margin="0 0 0 0"/>
-                <TextBlock Grid.Column="4" FontSize="13" FontWeight="DemiBold" Text="Phone Number" Margin="0 0 0 0"/>
-                <TextBlock Grid.Column="5" FontSize="13" FontWeight="DemiBold" Margin="0 0 0 0"/>
-                <TextBlock Grid.Column="6" FontSize="13" FontWeight="DemiBold" Margin="0 0 0 0"/>
-                <TextBlock Grid.Column="7" FontSize="13" FontWeight="DemiBold" Margin="0 0 0 0"/>
-                <TextBlock Grid.Column="8" FontSize="13" FontWeight="DemiBold" Margin="0 0 0 0"/>
-            </Grid>
 
-            <ListView x:Name="lvUser" DataContext="Wpf.Models.User" Grid.Row="0" BorderThickness="0.7" Background="#E3E1E1" HorizontalContentAlignment="Stretch" VerticalAlignment="Stretch" Margin="0 0 0 0">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="0.2*" />
-                                <ColumnDefinition Width="0.6*" />
-                                <ColumnDefinition Width="0.5*" />
-                                <ColumnDefinition Width="1*" />
-                                <ColumnDefinition Width="0.6*" />
-                                <ColumnDefinition Width="1*" />
-                                <ColumnDefinition Width="0.5*" />
-                                <ColumnDefinition Width="0.6*" />
-                                <ColumnDefinition Width="0.4*" />
-                            </Grid.ColumnDefinitions>
-
-                            <TextBlock Grid.Column="0" Text="{Binding Id}" Margin="10 0 0 0"/>
-                            <TextBlock Grid.Column="1" Text="{Binding FirstLastName}" Margin="0 0 0 0"/>
-                            <TextBlock Grid.Column="3" Text="{Binding Email}" Margin="0 0 0 0"/>
-                            <TextBlock Grid.Column="4" Text="{Binding PhoneNumber}" Margin="0 0 0 0"/>
-                            <TextBlock Grid.Column="5" Margin="0 0 0 0"/>
-                            <TextBlock Grid.Column="6" Margin="0 0 0 0"/>
-                            <TextBlock Grid.Column="7" Margin="0 0 0 0"/>
-                            <TextBlock Grid.Column="8" Margin="0 0 0 0"/>
-                        </Grid>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
         </StackPanel>
 
 
@@ -96,53 +85,57 @@
             <TextBlock Text="10 latest Cases" FontSize="15" FontWeight="DemiBold" Padding="30 10 0 0" />
             <TextBlock Text="(sorted by Status and Date)" Padding="30 0 0 20" />
 
-            <Grid Margin="5">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.23*" />
-                    <ColumnDefinition Width="1.4*" />
-                    <ColumnDefinition Width="1.8*" />
-                    <ColumnDefinition Width="1.2*" />
-                    <ColumnDefinition Width="0.5*" />
-                    <ColumnDefinition Width="0.5*" />
-                    <ColumnDefinition Width="0.7*" />
-                </Grid.ColumnDefinitions>
-
-                <TextBlock Grid.Column="0" FontSize="13" FontWeight="DemiBold" Text="Id" Margin="10 0 0 0"/>
-                <TextBlock Grid.Column="1" FontSize="13" FontWeight="DemiBold" Text="Head Line" Margin="0 0 0 0" Grid.ColumnSpan="2"/>
-                <TextBlock Grid.Column="2" FontSize="13" FontWeight="DemiBold" Text="Description" Margin="0 0 0 0"/>
-                <TextBlock Grid.Column="3" FontSize="13" FontWeight="DemiBold" Text="User" Margin="0 0 0 0"/>
-                <TextBlock Grid.Column="4" FontSize="13" FontWeight="DemiBold" Text="Status" Margin="0 0 0 0"/>
-                <TextBlock Grid.Column="5" FontSize="13" FontWeight="DemiBold" Text="Admin" Margin="0 0 0 0"/>
-                <TextBlock Grid.Column="6" FontSize="13" FontWeight="DemiBold" Text="Date" Margin="-10 0 0 0"/>
-            </Grid>
-
-            <ListView x:Name="lvCases" DataContext="Wpf.Models.Cases" Grid.Row="1" BorderThickness="0.7" Background="#E3E1E1" HorizontalContentAlignment="Stretch" VerticalAlignment="Stretch" Margin="0 0 0 0">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="0.23*" />
-                                <ColumnDefinition Width="1.4*" />
-                                <ColumnDefinition Width="1.8*" />
-                                <ColumnDefinition Width="1.2*" />
-                                <ColumnDefinition Width="0.5*" />
-                                <ColumnDefinition Width="0.5*" />
-                                <ColumnDefinition Width="0.7*" />
-                            </Grid.ColumnDefinitions>
-
-
-
-                            <TextBlock Grid.Column="0" Text="{Binding Id}" Margin="10 0 0 0" />
-                            <TextBlock Grid.Column="1" MaxWidth="230" HorizontalAlignment="Left" FontWeight="DemiBold" Text="{Binding HeadLine}" Margin="0 0 0 0"/>
-                            <TextBlock Grid.Column="2" MaxWidth="260" HorizontalAlignment="Left" Text="{Binding Description}" Margin="0 0 0 0"/>
-                            <TextBlock Grid.Column="3" Text="{Binding User.CaseView}" Margin="0 0 0 0"/>
-                            <TextBlock Grid.Column="4" MaxWidth="150" HorizontalAlignment="Left" Text="{Binding Status.StatusName}" Margin="0 0 0 0"/>
-                            <TextBlock Grid.Column="5" FontSize="13" Text="{Binding Admin.AdminName}" Margin="0 0 0 0"/>
-                            <TextBlock Grid.Column="6" Text="{Binding DateTime}" Margin="-10 0 0 0"/>
-                        </Grid>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+            <DataGrid RowStyle="{DynamicResource DataGridItemTemplate}" ColumnHeaderStyle="{DynamicResource DataGridItemTemplate}"
+                      x:Name="datagrid1"
+                      IsReadOnly="True"
+                      AutoGenerateColumns="False"
+                      ItemsSource="{Binding Cases, UpdateSourceTrigger=PropertyChanged}"
+                      Margin="30 10 30 0"
+                      Padding="0 0 0 0">
+                <DataGrid.Columns>
+                    <DataGridTextColumn
+                        Header="Id"
+                        MinWidth="30"
+                        Width="30"
+                        Binding="{Binding Id}"/>
+                    <DataGridTextColumn
+                        Header="Head Line"
+                        MinWidth="300"
+                        Width="*"
+                        FontWeight="DemiBold"
+                        Binding="{Binding HeadLine}"/>
+                    <DataGridTextColumn
+                        Header="Description"
+                        MinWidth="480"
+                        Width="*"
+                        Binding="{Binding Description}"/>
+                    <DataGridTextColumn
+                        Header="User"
+                        MinWidth="180"
+                        Width="180"
+                        FontWeight="DemiBold"
+                        Binding="{Binding FirstName}"/>
+                    <DataGridTextColumn
+                        Header="Status"
+                        MinWidth="100"
+                        Width="100"
+                        Binding="{Binding StatusName}"/>
+                    <DataGridTextColumn
+                        Header="Admin"
+                        MinWidth="150"
+                        Width="150"
+                        FontWeight="DemiBold"
+                        Binding="{Binding AdminName}"/>
+                    <DataGridTextColumn
+                        Header="Date"
+                        MinWidth="150"
+                        Width="100"
+                        Binding="{Binding DateTime}"/>
+                    
+                </DataGrid.Columns>
+            </DataGrid>
+                      
+            
         </StackPanel>
     </Grid>
 </UserControl> 

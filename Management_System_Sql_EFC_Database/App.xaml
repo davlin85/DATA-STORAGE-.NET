@@ -10,7 +10,8 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Templates/MenuItemTemplate.xaml" />
-                <ResourceDictionary Source="Templates/datagriditemtemplate.xaml" />
+                <ResourceDictionary Source="Templates/DataGridItemTemplate.xaml" />
+                <ResourceDictionary Source="Templates/ButtonTemplate.xaml" />
             </ResourceDictionary.MergedDictionaries>
             
             <DataTemplate DataType="{x:Type viewModel:CaseRegisterViewModel}">

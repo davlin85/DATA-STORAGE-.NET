@@ -10,7 +10,7 @@
     <Grid Background="#E7E7E7">
         <Grid.RowDefinitions>
             <RowDefinition Height="8*" />
-            <RowDefinition Height="3.5*" />
+            <RowDefinition Height="2.9*" />
         </Grid.RowDefinitions>
 
         <StackPanel Margin="0 0 0 0" Grid.Row="0">
@@ -38,11 +38,13 @@
                        Header="First Name"
                         MinWidth="150"
                         Width="*" 
+                        FontWeight="DemiBold"
                         Binding="{Binding FirstName}" />
                     <DataGridTextColumn 
                        Header="Last Name"
                         MinWidth="150"
                         Width="*"
+                        FontWeight="DemiBold"
                         Binding="{Binding LastName}" />
                     <DataGridTextColumn 
                        Header="Email"
@@ -82,67 +84,130 @@
 
         </StackPanel>
 
-        <StackPanel Margin="0 0 0 0" Grid.Row="1">
+
+        <StackPanel Margin="0 0 0 0" Grid.Row="1" Background="#E3E1E1">
+            <TextBlock Text="Update and Delete User" FontSize="15" FontWeight="DemiBold" Padding="30 20 0 0" />
+            <TextBlock Text="(Fill in all fields to Update User or Enter Id and click Delete User)" Padding="30 0 0 20" />
+
             <Grid Margin="5">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.2*" />
+                    <ColumnDefinition Width="0.45*" />
+                    <ColumnDefinition Width="0.8*" />
+                    <ColumnDefinition Width="0.8*" />
+                    <ColumnDefinition Width="0.8*" />
                     <ColumnDefinition Width="0.6*" />
+                    <ColumnDefinition Width="0.8*" />
                     <ColumnDefinition Width="0.5*" />
-                    <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="0.6*" />
-                    <ColumnDefinition Width="1*" />
                     <ColumnDefinition Width="0.5*" />
-                    <ColumnDefinition Width="0.6*" />
-                    <ColumnDefinition Width="0.4*" />
+                    <ColumnDefinition Width="0.5*" />
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Grid.Column="0" FontSize="13" FontWeight="DemiBold" Text="Id" Margin="10 0 0 0"/>
-                <TextBlock Grid.Column="1" FontSize="13" FontWeight="DemiBold" Text="First Name" Margin="21,0,134,0" Grid.ColumnSpan="2"/>
-                <TextBlock Grid.Column="2" FontSize="13" FontWeight="DemiBold" Text="Last Name" Margin="0,0,263,0" Grid.ColumnSpan="2"/>
-                <TextBlock Grid.Column="3" FontSize="13" FontWeight="DemiBold" Text="Email" Margin="12,0,118,0"/>
-                <TextBlock Grid.Column="4" FontSize="13" FontWeight="DemiBold" Text="Phone Number" Margin="1,0,53,0"/>
-                <TextBlock Grid.Column="4" FontSize="13" FontWeight="DemiBold" Text="Street Name" Margin="148,0,178,0" Grid.ColumnSpan="2"/>
-                <TextBlock Grid.Column="5" FontSize="13" FontWeight="DemiBold" Text="Postal Code" Margin="207,0,83,0" Grid.ColumnSpan="2"/>
-                <TextBlock Grid.Column="6" FontSize="13" FontWeight="DemiBold" Text="City" Margin="67,0,145,0" Grid.ColumnSpan="2"/>
-                <TextBlock Grid.Column="7" FontSize="13" FontWeight="DemiBold" Text="Country" Margin="80,0,41,0" Grid.ColumnSpan="2"/>
-            </Grid>
+                <TextBlock Width="50" HorizontalAlignment="Left" Grid.Column="0" FontSize="13" FontWeight="DemiBold" Text="Id" Margin="30 0 0 0"/>
+                <TextBlock Width="160" HorizontalAlignment="Left" Grid.Column="1" FontSize="13" FontWeight="DemiBold" Text="First Name" Margin="0 0 0 0"/>
+                <TextBlock Width="160" HorizontalAlignment="Left" Grid.Column="2" FontSize="13" FontWeight="DemiBold" Text="Last Name" Margin="0 0 0 0" />
+                <TextBlock Width="160" HorizontalAlignment="Left" Grid.Column="3" FontSize="13" FontWeight="DemiBold" Text="Email" Margin="4 0 0 0" />
+                <TextBlock Width="160" HorizontalAlignment="Left" Grid.Column="4" FontSize="13" FontWeight="DemiBold" Text="Phone Number" Margin="-3 0 0 0" />
+                <TextBlock Width="160" HorizontalAlignment="Left" Grid.Column="1" FontSize="13" FontWeight="DemiBold" Text="Street Name" Margin="0,62,0,-67" />
+                <TextBlock Width="160" HorizontalAlignment="Left" Grid.Column="1" FontSize="13" FontWeight="DemiBold" Text="Postal Code" Margin="202,62,0,-67" Grid.ColumnSpan="2" />
+                <TextBlock Width="160" HorizontalAlignment="Left" Grid.Column="3" FontSize="13" FontWeight="DemiBold" Text="City" Margin="4,62,0,-67" />
+                <TextBlock Width="160" HorizontalAlignment="Left" Grid.Column="3" FontSize="13" FontWeight="DemiBold" Text="Country" Margin="197,62,0,-67" Grid.ColumnSpan="2" />
 
+            </Grid>
 
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="55*" />
-                    <ColumnDefinition Width="47*" />
-                    <ColumnDefinition Width="6*"/>
-                    <ColumnDefinition Width="223*"/>
-                    <ColumnDefinition Width="20*" />
-                    <ColumnDefinition Width="256*"/>
-                    <ColumnDefinition Width="111*" />
-                    <ColumnDefinition Width="276*" />
-                    <ColumnDefinition Width="62*" />
-                    <ColumnDefinition Width="76*"/>
-                    <ColumnDefinition Width="111*" />
-                    <ColumnDefinition Width="94*" />
-                    <ColumnDefinition Width="9*"/>
-                    <ColumnDefinition Width="8*"/>
-                    <ColumnDefinition Width="9*" />
-                    <ColumnDefinition Width="102*"/>
+                    <ColumnDefinition Width="115*" />
+                    <ColumnDefinition Width="204*" />
+                    <ColumnDefinition Width="204*" />
+                    <ColumnDefinition Width="204*" />
+                    <ColumnDefinition Width="153*" />
+                    <ColumnDefinition Width="37*" />
+                    <ColumnDefinition Width="167*"/>
+                    <ColumnDefinition Width="127*" />
+                    <ColumnDefinition Width="127*" />
+                    <ColumnDefinition Width="18*" />
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="104*"/>
                 </Grid.ColumnDefinitions>
 
-                <TextBox x:Name="AddId" Width="42" Padding="5" HorizontalAlignment="Left" Margin="15,0,0,0" Grid.ColumnSpan="2" />
-                <TextBox x:Name="AddFirstName" Width="119" Padding="5" HorizontalAlignment="Left" Margin="23,0,0,0" Grid.ColumnSpan="3" Grid.Column="1"/>
-                <TextBox x:Name="AddLastName" Width="127" Padding="5" HorizontalAlignment="Left" Margin="109,0,0,0" Grid.Column="3" Grid.ColumnSpan="2"/>
-                <TextBox x:Name="AddEmail" Grid.Column="5" Width="243" Padding="5" HorizontalAlignment="Left" Margin="13,0,0,0"/>
-                <TextBox x:Name="AddPhoneNumber" Grid.Column="7" Width="193" Padding="5" HorizontalAlignment="Left"  Margin="53,0,0,0"/>
-                <TextBox x:Name="AddStreetName" Grid.Column="6" Width="120" Padding="5" HorizontalAlignment="Left" Margin="22,0,0,0" Grid.ColumnSpan="2"/>
-                <TextBox x:Name="AddPostalCode" Grid.Column="9" Width="111" Padding="5" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="66,0,0,0"/>
-                <TextBox x:Name="AddCity" Grid.Column="8" Padding="5" Margin="0,0,38,0" Grid.ColumnSpan="2"/>
-                <TextBox x:Name="AddCountry" Grid.Column="11" Width="168" Padding="5" HorizontalAlignment="Left" Margin="20,0,0,0" Grid.ColumnSpan="5"/>
 
-                <Button x:Name="AddChange" Foreground="Black" Background="#51AAD0" FontWeight="DemiBold" FontSize="12" Content="Update User" Padding="0 5 0 5" Margin="15,76,184,-75" Click="AddChange_Click" Grid.ColumnSpan="4" />
+                <TextBox x:Name="AddId" Width="50" Padding="4" FontSize="12" HorizontalContentAlignment="Left" Grid.Column="0" >
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
 
-                <Button x:Name="AddDelete" Foreground="Black" Background="#51AAD0" FontWeight="DemiBold" FontSize="12" Content="Delete User" Padding="0 5 0 5" Margin="63,76,31,-75" Click="AddDelete_Click" Grid.Column="3" />
+                <TextBox x:Name="AddFirstName" Width="160" Padding="4" Margin="-38 0 0 0" FontSize="12" HorizontalContentAlignment="Left" Grid.Column="1" >
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
 
-                <Button x:Name="AddClear" Foreground="Black" Background="#51AAD0" FontWeight="DemiBold" FontSize="12" Content="Clear Data" Padding="0 5 0 5" Click="AddClear_Click" Height="28" Width="125" Grid.Column="5" Margin="50,76,81,-75" />
+                <TextBox x:Name="AddLastName" Width="160" Padding="4" Margin="-38 0 0 0" FontSize="12" HorizontalContentAlignment="Left" Grid.Column="2" >
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+
+                <TextBox x:Name="AddEmail" Width="160" Padding="4" Margin="-38 0 0 0" FontSize="12" HorizontalContentAlignment="Left" Grid.Column="3" >
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+
+                <TextBox x:Name="AddPhoneNumber" Width="160" Padding="4" Margin="-38 0 0 0" FontSize="12" HorizontalContentAlignment="Left" Grid.Column="4" Grid.ColumnSpan="2" >
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+
+                <TextBox x:Name="AddStreetName" Width="160" Padding="4" Margin="-38,63,0,-63" FontSize="12" HorizontalContentAlignment="Left" Grid.Column="1" >
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+
+                <TextBox x:Name="AddPostalCode" Width="160" Padding="4" Margin="-38,63,0,-63" FontSize="12" HorizontalContentAlignment="Left" Grid.Column="2" >
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+
+                <TextBox x:Name="AddCity" Width="160" Padding="4" Margin="-38,63,0,-63" FontSize="12" HorizontalContentAlignment="Left" Grid.Column="3" >
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+
+                <TextBox x:Name="AddCountry" Width="160" Padding="4" Margin="-38,63,0,-63" FontSize="12" HorizontalContentAlignment="Left" Grid.Column="4" Grid.ColumnSpan="2" >
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+
+
+
+                <Button Style="{DynamicResource RoundCorner}" x:Name="AddChange" Foreground="White" FontSize="12" Content="Update User" Padding="0 5 0 5" Margin="0,63,0,-63" Click="AddChange_Click" Grid.Column="6" HorizontalAlignment="Center" Width="130" />
+                <Button Style="{DynamicResource RoundCorner}" x:Name="AddDelete" Foreground="White" Background="#51AAD0" FontWeight="DemiBold" FontSize="12" Content="Delete User" Padding="0 5 0 5" Margin="10,63,114,-63" Click="AddDelete_Click" Grid.Column="7" Grid.ColumnSpan="2" />
+                <Button Style="{DynamicResource RoundCorner}" x:Name="AddClear" Foreground="white" Background="#51AAD0" FontWeight="DemiBold" FontSize="12" Content="Clear Data" Padding="0 5 0 5" Click="AddClear_Click" Grid.Column="8" Margin="41,63,83,-63" Grid.ColumnSpan="4" />
             </Grid>
 
         </StackPanel>

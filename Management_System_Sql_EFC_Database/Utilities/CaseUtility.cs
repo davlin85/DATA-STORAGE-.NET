@@ -12,9 +12,7 @@ namespace Management_System_Sql_EFC_Database.Utilities
     internal interface ICaseUtility
     {
         bool CreateCase(string headline, string description, DateTime dateTime, int userId, int statusId, int adminId);
-        IEnumerable<Case> Get10Cases();
-        IEnumerable<Case> GetAllCases();
-        IEnumerable<Case> GetStatus();
+
     }
 
     internal class CaseUtility : ICaseUtility
@@ -41,20 +39,5 @@ namespace Management_System_Sql_EFC_Database.Utilities
             return false;
         }
 
-
-        public IEnumerable<Case> Get10Cases()
-        {
-            return _context.Cases.Include(x => x.User).Include(x => x.Status).Include(x => x.Admin).OrderBy(d => d.StatusId).ThenByDescending(d => d.DateTime).Take(10);
-        }
-
-        public IEnumerable<Case> GetAllCases()
-        {
-            return _context.Cases.Include(x => x.User).Include(x => x.Status).Include(x => x.Admin).OrderByDescending(p => p.Id);
-        }
-
-        public IEnumerable<Case> GetStatus()
-        {
-            return _context.Cases;
-        }
     }
 }
